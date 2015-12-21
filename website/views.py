@@ -1,11 +1,7 @@
 from django.shortcuts import render
 from .models import Images,Comments
 def listPictures(request):
-    return render(request, ‘pictures.html’, {image:’image’}) 
+    return render(request, ‘pictures.html’, {image:loadImages()}) 
 def    loadImages():
- imagesHTML = ""
- for image in Image.objects.all():
-    imagesHTML += '<img src="'+image.idl+'">'
- return imagesHTML
+ return Images.objects.all().
 
-# Create your views here.
