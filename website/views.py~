@@ -4,6 +4,5 @@ def listPictures(request):
     return render(request, ‘pictures.html’, {image:loadImages()}) 
 def    loadImages():
  return Images.objects.all()
-
 def loadComments():
  return Comments.objects.all()
