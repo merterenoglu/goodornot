@@ -2,7 +2,11 @@ from django.shortcuts import render
 from .models import Images,Comments
 def listPictures(request):
     return render(request, ‘pictures.html’, {image:loadImages()}) 
+<<<<<<< HEAD
+
+=======
 def    loadImages():
  return Images.objects.all()
 def loadComments():
  return Comments.objects.all()
+>>>>>>> 6fee7dd02c0aad902ff9c254607605255c923290
