@@ -9,9 +9,9 @@ def listPictures(request):
         curr = []
         curr.append(Comments.objects.get(idl=image.idl))
 
-    return render(request, ‘pictures.html’, {image:Images.objects.all()}) 
+    return render(request,'pictures.html', {image:Images.objects.all(),comment:comments}) 
 
-    return render(request, ‘pictures.html’, {image:loadImages()}) 
+    return render(request,'pictures.html', {image:loadImages()}) 
 def    loadImages():
  return Images.objects.all()
 
