@@ -27,7 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATIC_URL = '/static/'
 
+STATIC_ROOT = ''
+# Application definition
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/Users/ooo/goodornot/goodornot/static/',
+]
 # Application definition
 
 INSTALLED_APPS = [
