@@ -1,14 +1,15 @@
+
 <!DOCTYPE HTML>
 <head>
    
 </head>
 <body>
    <h1>Good or not websitess</h1>
-{% for o in range(0,len(image)) %}
-   <img src=' {{ image[o].path}}' />
+{% for o in image %}
+   <img src=' {{ o.path}}' />
    <button>Like</button>
    <button> Don't like</button>
-   {{ comment[o] }}
+   
 {% endfor %}
 </body>
 </html>
