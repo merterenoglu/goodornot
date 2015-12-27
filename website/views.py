@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from .models import Images,Comments
+
+
 def listPictures(request):
-<<<<<<< HEAD
+    images = Images.objects.all()
+    comments = []
+    for image in images:
+        curr = []
+        curr.append(Comments.objects.get(idl=image.idl))
+
     return render(request, ‘pictures.html’, {image:Images.objects.all()}) 
-=======
+
     return render(request, ‘pictures.html’, {image:loadImages()}) 
 def    loadImages():
  return Images.objects.all()
