@@ -39,7 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
 ]
-STATIC_URL = '/images/'
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+STATIC_PATH = os.path.join(PROJECT_PATH,'images')
+
+STATIC_URL = '/images/' # You may find this is already defined as such.
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
