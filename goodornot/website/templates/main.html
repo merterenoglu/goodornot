@@ -1,13 +1,13 @@
 
 <!DOCTYPE HTML>
 <head>
-   
+   {% load staticfiles %}
 </head>
 <body>
    <h1>Good or not websitess</h1>
 {% for o in image %}
    <img src=' {{ o.path}}' />
-    <img src="{% static “res.png" %}" alt="Picture of Rango" />
+    <img src="{% static "res.png" %}" alt="Picture of Rango" />
    <button>Like</button>
    <button> Don't like</button>
    
